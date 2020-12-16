@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.ItemSelectedEventArgsConverterPage"
+             Title="ItemSelectedEventArgsConverter">
+    <ContentPage.Resources>
+        <xct:ItemSelectedEventArgsConverter x:Key="itemSelectedEventArgsConverter" />
+    </ContentPage.Resources>
+
+    <ListView>
+        <ListView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>value0</x:String>
+                <x:String>value1</x:String>
+                <x:String>value2</x:String>
+            </x:Array>
+        </ListView.ItemsSource>
+        <ListView.Behaviors>
+            <xct:EventToCommandBehavior EventName="ItemSelected"
+                                        Command="{Binding ItemSelectedCommand}"
+                                        EventArgsConverter="{StaticResource itemSelectedEventArgsConverter}" />
+        </ListView.Behaviors>
+    </ListView>
+</ContentPage>

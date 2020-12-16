@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.MultiConverterPage"
+             Title="MultiConverter">
+    <ContentPage.Resources>
+        <xct:MultiConverter x:Key="multiConverter" >
+            <xct:EqualConverter />
+            <xct:BoolToObjectConverter x:TypeArguments="x:String"
+                                       TrueObject="同じ"
+                                       FalseObject="違う" />
+        </xct:MultiConverter>
+        <x:Array x:Key="multiParams"
+                 Type="{x:Type xct:MultiConverterParameter}" >
+            <xct:MultiConverterParameter
+                ConverterType="{x:Type xct:EqualConverter}"
+                Value="value" />
+        </x:Array>
+        <x:String x:Key="value">value</x:String>
+    </ContentPage.Resources>
+
+    <Label VerticalOptions="Center" HorizontalOptions="Center"
+           Text="{Binding ., Source={StaticResource value},
+                  Converter={StaticResource multiConverter},
+                  ConverterParameter={StaticResource multiParams}}" />
+</ContentPage>

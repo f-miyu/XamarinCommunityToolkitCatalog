@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="XamarinCommunityToolkitCatalog.Views.MainPage"
+             ios:Page.UseSafeArea="True">
+    <ScrollView>
+        <StackLayout HorizontalOptions="Center">
+            <Button Text="AnimationBehavior" Command="{prism:NavigateTo AnimationBehaviorPage}" />
+            <Button Text="EventToCommandBehavior" Command="{prism:NavigateTo EventToCommandBehaviorPage}" />
+            <Button Text="ImpliedOrderGridBehavior" Command="{prism:NavigateTo ImpliedOrderGridBehaviorPage}" />
+            <Button Text="MaskedBehavior" Command="{prism:NavigateTo MaskedBehaviorPage}" />
+            <Button Text="MaxLengthReachedBehavior" Command="{prism:NavigateTo MaxLengthReachedBehaviorPage}" />
+            <Button Text="UserStoppedTypingBehavior" Command="{prism:NavigateTo UserStoppedTypingBehaviorPage}" />
+            <Button Text="CharactersValidationBehavior" Command="{prism:NavigateTo CharactersValidationBehaviorPage}" />
+            <Button Text="EmailValidationBehavior" Command="{prism:NavigateTo EmailValidationBehaviorPage}" />
+            <Button Text="MultiValidationBehavior" Command="{prism:NavigateTo MultiValidationBehaviorPage}" />
+            <Button Text="NumericValidationBehavior" Command="{prism:NavigateTo NumericValidationBehaviorPage}" />
+            <Button Text="RequiredStringValidationBehavior" Command="{prism:NavigateTo RequiredStringValidationBehaviorPage}" />
+            <Button Text="TextValidationBehavior" Command="{prism:NavigateTo TextValidationBehaviorPage}" />
+            <Button Text="UriValidationBehavior" Command="{prism:NavigateTo UriValidationBehaviorPage}" />
+
+            <Button Text="BoolToObjectConverter" Command="{prism:NavigateTo BoolToObjectConverterPage}" />
+            <Button Text="ByteArrayToImageSourceConverter" Command="{prism:NavigateTo ByteArrayToImageSourceConverterPage}" />
+            <Button Text="DateTimeOffsetConverter" Command="{prism:NavigateTo DateTimeOffsetConverterPage}" />
+            <Button Text="DoubleToIntConverter" Command="{prism:NavigateTo DoubleToIntConverterPage}" />
+            <Button Text="EqualConverter" Command="{prism:NavigateTo EqualConverterPage}" />
+            <Button Text="IndexToArrayItemConverter" Command="{prism:NavigateTo IndexToArrayItemConverterPage}" />
+            <Button Text="IntToBoolConverter" Command="{prism:NavigateTo IntToBoolConverterPage}" />
+            <Button Text="InvertedBoolConverter" Command="{prism:NavigateTo InvertedBoolConverterPage}" />
+            <Button Text="IsNotNullOrEmptyConverter" Command="{prism:NavigateTo IsNotNullOrEmptyConverterPage}" />
+            <Button Text="IsNullOrEmptyConverter" Command="{prism:NavigateTo IsNullOrEmptyConverterPage}" />
+            <Button Text="ItemSelectedEventArgsConverter" Command="{prism:NavigateTo ItemSelectedEventArgsConverterPage}" />
+            <Button Text="ItemTappedEventArgsConverter" Command="{prism:NavigateTo ItemTappedEventArgsConverterPage}" />
+            <Button Text="ListIsNotNullOrEmptyConverter" Command="{prism:NavigateTo ListIsNotNullOrEmptyConverterPage}" />
+            <Button Text="ListIsNullOrEmptyConverter" Command="{prism:NavigateTo ListIsNullOrEmptyConverterPage}" />
+            <Button Text="ListToStringConverter" Command="{prism:NavigateTo ListToStringConverterPage}" />
+            <Button Text="MultiConverter" Command="{prism:NavigateTo MultiConverterPage}" />
+            <Button Text="NotEqualConverter" Command="{prism:NavigateTo NotEqualConverterPage}" />
+            <Button Text="StateToBooleanConverter" Command="{prism:NavigateTo StateToBooleanConverterPage}" />
+            <Button Text="TextCaseConverter" Command="{prism:NavigateTo TextCaseConverterPage}" />
+            <Button Text="TimeSpanToDoubleConverter" Command="{prism:NavigateTo TimeSpanToDoubleConverterPage}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

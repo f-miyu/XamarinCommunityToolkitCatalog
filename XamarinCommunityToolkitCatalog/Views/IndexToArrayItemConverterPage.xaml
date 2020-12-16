@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.IndexToArrayItemConverterPage"
+             Title="IndexToArrayItemConverter">
+    <ContentPage.Resources>
+        <xct:IndexToArrayItemConverter x:Key="indexToArrayItemConverter" />
+        <x:Int32 x:Key="value">1</x:Int32>
+        <x:Array x:Key="array" Type="{x:Type x:String}">
+            <x:String>value0</x:String>
+            <x:String>value1</x:String>
+            <x:String>value2</x:String>
+        </x:Array>
+    </ContentPage.Resources>
+
+    <Label VerticalOptions="Center" HorizontalOptions="Center"
+           Text="{Binding ., Source={StaticResource value},
+                  Converter={StaticResource indexToArrayItemConverter},
+                  ConverterParameter={StaticResource array}}" />
+</ContentPage>

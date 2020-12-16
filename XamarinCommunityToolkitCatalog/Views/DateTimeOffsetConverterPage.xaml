@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="XamarinCommunityToolkitCatalog.Views.DateTimeOffsetConverterPage"
+             Title="DateTimeOffsetConverter">
+    <ContentPage.Resources>
+        <xct:DateTimeOffsetConverter x:Key="dateTimeOffsetConverter" />
+        <sys:DateTimeOffset x:Key="value">
+            <x:Arguments>
+                <x:Int32>2020</x:Int32>
+                <x:Int32>12</x:Int32>
+                <x:Int32>16</x:Int32>
+                <x:Int32>0</x:Int32>
+                <x:Int32>0</x:Int32>
+                <x:Int32>0</x:Int32>
+                <x:TimeSpan />
+            </x:Arguments>
+        </sys:DateTimeOffset>
+    </ContentPage.Resources>
+
+    <DatePicker VerticalOptions="Center" HorizontalOptions="Center"
+                Date="{Binding ., Source={StaticResource value},
+                       Converter={StaticResource dateTimeOffsetConverter}}" />
+</ContentPage>
+

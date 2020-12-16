@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.DoubleToIntConverterPage"
+             Title="DoubleToIntConverter">
+    <ContentPage.Resources>
+        <xct:DoubleToIntConverter x:Key="doubleToIntConverter" />
+        <x:Double x:Key="value">1.25</x:Double>
+    </ContentPage.Resources>
+
+    <Label VerticalOptions="Center" HorizontalOptions="Center"
+           Text="{Binding ., Source={StaticResource value},
+                  Converter={StaticResource doubleToIntConverter},
+                  ConverterParameter=10}" />
+</ContentPage>

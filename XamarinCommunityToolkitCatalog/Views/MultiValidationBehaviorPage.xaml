@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.MultiValidationBehaviorPage"
+             Title="MultiValidationBehavior">
+    <ContentPage.Resources>
+        <Style x:Key="invalidEntryStyle" TargetType="Entry">
+            <Setter Property="TextColor" Value="Red" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout VerticalOptions="Center" Margin="32, 0">
+        <Entry>
+            <Entry.Behaviors>
+                <xct:MultiValidationBehavior x:Name="multiValidationBehavior"
+                                             InvalidStyle="{StaticResource invalidEntryStyle}" >
+                    <xct:CharactersValidationBehavior CharacterType="Digit"
+                                                      MinimumCharacterCount="1"
+                                                      xct:MultiValidationBehavior.Error="数字1文字以上" />
+                    <xct:CharactersValidationBehavior CharacterType="UppercaseLetter"
+                                                      MinimumCharacterCount="1"
+                                                      xct:MultiValidationBehavior.Error="大文字1文字以上" />
+                    <xct:CharactersValidationBehavior CharacterType="Any"
+                                                      MinimumCharacterCount="8"
+                                                      xct:MultiValidationBehavior.Error="8文字以上" />
+                </xct:MultiValidationBehavior>
+            </Entry.Behaviors>
+        </Entry>
+        <Label Text="{Binding Errors[0], Source={x:Reference multiValidationBehavior}}" />
+    </StackLayout>
+</ContentPage>

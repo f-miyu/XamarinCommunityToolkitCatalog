@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.AnimationBehaviorPage"
+             Title="AnimationBehavior">
+    <StackLayout VerticalOptions="Center"
+                 Padding="32, 0"
+                 Spacing="16">
+        <Label Text="Fade" HorizontalTextAlignment="Center" >
+            <Label.Behaviors>
+                <xct:AnimationBehavior Command="{Binding FinishedCommand}">
+                    <xct:AnimationBehavior.AnimationType>
+                        <xct:FadeAnimation />
+                    </xct:AnimationBehavior.AnimationType>
+                </xct:AnimationBehavior>
+            </Label.Behaviors>
+        </Label>
+
+        <Label Text="FlipHorizontal" HorizontalTextAlignment="Center" >
+            <Label.Behaviors>
+                <xct:AnimationBehavior Command="{Binding FinishedCommand}">
+                    <xct:AnimationBehavior.AnimationType>
+                        <xct:FlipHorizontalAnimation />
+                    </xct:AnimationBehavior.AnimationType>
+                </xct:AnimationBehavior>
+            </Label.Behaviors>
+        </Label>
+
+        <Label Text="FlipHorizontal" HorizontalTextAlignment="Center" >
+            <Label.Behaviors>
+                <xct:AnimationBehavior Command="{Binding FinishedCommand}">
+                    <xct:AnimationBehavior.AnimationType>
+                        <xct:FlipVerticalAnimation />
+                    </xct:AnimationBehavior.AnimationType>
+                </xct:AnimationBehavior>
+            </Label.Behaviors>
+        </Label>
+
+        <Label Text="Rotate" HorizontalTextAlignment="Center" >
+            <Label.Behaviors>
+                <xct:AnimationBehavior Command="{Binding FinishedCommand}">
+                    <xct:AnimationBehavior.AnimationType>
+                        <xct:RotateAnimation Rotation="360" Duration="1000" />
+                    </xct:AnimationBehavior.AnimationType>
+                </xct:AnimationBehavior>
+            </Label.Behaviors>
+        </Label>
+
+        <Label Text="Scale" HorizontalTextAlignment="Center" >
+            <Label.Behaviors>
+                <xct:AnimationBehavior Command="{Binding FinishedCommand}">
+                    <xct:AnimationBehavior.AnimationType>
+                        <xct:ScaleAnimation Scale="2" />
+                    </xct:AnimationBehavior.AnimationType>
+                </xct:AnimationBehavior>
+            </Label.Behaviors>
+        </Label>
+
+        <Button Text="Shake">
+            <Button.Behaviors>
+                <xct:AnimationBehavior EventName="Clicked"
+                                       Command="{Binding FinishedCommand}">
+                    <xct:AnimationBehavior.AnimationType>
+                        <xct:ShakeAnimation />
+                    </xct:AnimationBehavior.AnimationType>
+                </xct:AnimationBehavior>
+            </Button.Behaviors>
+        </Button>
+    </StackLayout>
+</ContentPage>

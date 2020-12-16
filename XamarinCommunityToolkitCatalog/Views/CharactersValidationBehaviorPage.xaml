@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.CharactersValidationBehaviorPage"
+             Title="CharactersValidationBehavior">
+    <ContentPage.Resources>
+        <Style x:Key="invalidEntryStyle" TargetType="Entry">
+            <Setter Property="TextColor" Value="Red" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Entry VerticalOptions="Center" Margin="32, 0">
+        <Entry.Behaviors>
+            <xct:CharactersValidationBehavior InvalidStyle="{StaticResource invalidEntryStyle}"
+                                              CharacterType="Letter"
+                                              MinimumCharacterCount="2"
+                                              MaximumCharacterCount="5" />
+        </Entry.Behaviors>
+    </Entry>
+</ContentPage>

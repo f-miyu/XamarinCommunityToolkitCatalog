@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.BoolToObjectConverterPage"
+             Title="BoolToObjectConverter">
+    <ContentPage.Resources>
+        <xct:BoolToObjectConverter x:Key="boolToObjectConverter"
+                                   x:TypeArguments="x:String"
+                                   TrueObject="真"
+                                   FalseObject="偽"/>
+        <x:Boolean x:Key="value">true</x:Boolean>
+    </ContentPage.Resources>
+
+    <Label VerticalOptions="Center" HorizontalOptions="Center"
+           Text="{Binding ., Source={StaticResource value},
+                  Converter={StaticResource boolToObjectConverter}}" />
+</ContentPage>
