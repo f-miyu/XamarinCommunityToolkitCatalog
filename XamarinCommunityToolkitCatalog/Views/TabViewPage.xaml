@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.TabViewPage"
+             Title="TabView">
+    <xct:TabView TabIndicatorColor="Red">
+        <xct:TabViewItem Text="Tab1">
+            <Label VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Text="Tab1"/>
+        </xct:TabViewItem>
+        <xct:TabViewItem Text="Tab2">
+            <Label VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Text="Tab2"/>
+        </xct:TabViewItem >
+    </xct:TabView>
+</ContentPage>

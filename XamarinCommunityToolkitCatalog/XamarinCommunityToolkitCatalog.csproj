@@ -11,20 +11,34 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1791-pre5" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.0.0.1909" />
-    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.0.0-pre5" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.0.0-pre6" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Images\" />
+    <Folder Include="Resx\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Images\icon.png" />
+    <None Remove="Images\icon2.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\icon.png" />
+    <EmbeddedResource Include="Images\icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resx\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resx\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.TouchEffectPage"
+             Title="TouchEffect">
+    <Label VerticalOptions="Center"
+           HorizontalTextAlignment="Center"
+           Text="tap"
+           xct:TouchEffect.PressedScale="0.7"/>
+</ContentPage>

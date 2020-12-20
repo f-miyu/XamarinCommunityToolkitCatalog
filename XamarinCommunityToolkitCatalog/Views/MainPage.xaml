@@ -41,6 +41,32 @@
             <Button Text="StateToBooleanConverter" Command="{prism:NavigateTo StateToBooleanConverterPage}" />
             <Button Text="TextCaseConverter" Command="{prism:NavigateTo TextCaseConverterPage}" />
             <Button Text="TimeSpanToDoubleConverter" Command="{prism:NavigateTo TimeSpanToDoubleConverterPage}" />
+
+            <Button Text="IconTintColorEffect" Command="{prism:NavigateTo IconTintColorEffectPage}" />
+            <Button Text="RemoveBorderEffect" Command="{prism:NavigateTo RemoveBorderEffectPage}" />
+            <Button Text="SafeAreaEffect" Command="{prism:NavigateTo SafeAreaEffectPage}" />
+            <Button Text="SelectAllTextEffect" Command="{prism:NavigateTo SelectAllTextEffectPage}" />
+            <Button Text="TouchEffect" Command="{prism:NavigateTo TouchEffectPage}" />
+            <Button Text="VisualFeedbackEffect" Command="{prism:NavigateTo VisualFeedbackEffectPage}" />
+
+            <Button Text="GravatarImageExtension" Command="{prism:NavigateTo GravatarImageExtensionPage}" />
+            <Button Text="ImageResourceExtension" Command="{prism:NavigateTo ImageResourceExtensionPage}" />
+            <Button Text="TranslateExtension" Command="{prism:NavigateTo TranslateExtensionPage}" />
+
+            <Button Text="AvatarView" Command="{prism:NavigateTo AvatarViewPage}" />
+            <Button Text="BadgeView" Command="{prism:NavigateTo BadgeViewPage}" />
+            <Button Text="CameraView" Command="{prism:NavigateTo CameraViewPage}" />
+            <Button Text="DockLayout" Command="{prism:NavigateTo DockLayoutPage}" />
+            <Button Text="Expander" Command="{prism:NavigateTo ExpanderPage}" />
+            <Button Text="MediaElement" Command="{prism:NavigateTo MediaElementPage}" />
+            <Button Text="RangeSlider" Command="{prism:NavigateTo RangeSliderPage}" />
+            <Button Text="Shield" Command="{prism:NavigateTo ShieldPage}" />
+            <Button Text="SideMenuView" Command="{prism:NavigateTo SideMenuViewPage}" />
+            <Button Text="SnackBar" Command="{prism:NavigateTo SnackBarPage}" />
+            <Button Text="Toast" Command="{prism:NavigateTo ToastPage}" />
+            <Button Text="StateLayout" Command="{prism:NavigateTo StateLayoutPage}" />
+            <Button Text="UniformGrid" Command="{prism:NavigateTo UniformGridPage}" />
+            <Button Text="TabView" Command="{prism:NavigateTo TabViewPage}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

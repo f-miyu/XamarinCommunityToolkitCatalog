@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.SideMenuViewPage"
+             Title="SideMenuView">
+    <xct:SideMenuView>
+        <Label HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Background="white"
+               Text="Main" />
+        <Label xct:SideMenuView.Position="LeftMenu"
+               xct:SideMenuView.MenuWidthPercentage=".5"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Background="red"
+               Text="LeftMenu" />
+        <Label xct:SideMenuView.Position="RightMenu"
+               xct:SideMenuView.MenuWidthPercentage=".3"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Background="blue"
+               Text="RightMenu" />
+    </xct:SideMenuView>
+</ContentPage>

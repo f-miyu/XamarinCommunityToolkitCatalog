@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.StateLayoutPage"
+             Title="StateLayout">
+    <StackLayout VerticalOptions="Center"
+                 Margin="32,0"
+                 xct:StateLayout.CurrentState="{Binding CurrentState}"
+                 xct:StateLayout.CurrentCustomStateKey="{Binding CustomState}">
+        <xct:StateLayout.StateViews>
+            <xct:StateView StateKey="Loading">
+                <Label Text="Loading" HorizontalTextAlignment="Center" />
+            </xct:StateView>
+            <xct:StateView StateKey="Saving">
+                <Label Text="Saving" HorizontalTextAlignment="Center" />
+            </xct:StateView>
+            <xct:StateView StateKey="Success">
+                <Label Text="Success" HorizontalTextAlignment="Center" />
+            </xct:StateView>
+            <xct:StateView StateKey="Error">
+                <Label Text="Error" HorizontalTextAlignment="Center" />
+            </xct:StateView>
+            <xct:StateView StateKey="Empty">
+                <Label Text="Empty" HorizontalTextAlignment="Center" />
+            </xct:StateView>
+            <xct:StateView StateKey="Custom"
+                           CustomStateKey="CustomState">
+                <Label Text="Custom" HorizontalTextAlignment="Center" />
+            </xct:StateView>
+        </xct:StateLayout.StateViews>
+        <Button Text="CycleStates" Command="{Binding CycleStatesCommand}" />
+    </StackLayout>
+</ContentPage>

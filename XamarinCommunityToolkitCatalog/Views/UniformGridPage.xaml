@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XamarinCommunityToolkitCatalog.Views.UniformGridPage"
+             Title="UniformGrid">
+    <ContentPage.Resources>
+        <Style TargetType="BoxView">
+            <Setter Property="WidthRequest" Value="100" />
+            <Setter Property="HeightRequest" Value="100" />
+        </Style>
+    </ContentPage.Resources>
+
+    <xct:UniformGrid>
+        <BoxView Color="Pink" />
+        <BoxView Color="Yellow" />
+        <BoxView Color="LightBlue" />
+        <BoxView Color="Blue" />
+        <BoxView Color="Orange" />
+        <BoxView Color="Purple" />
+        <BoxView Color="Red" />
+        <BoxView Color="LightGreen" />
+        <BoxView Color="LightGray" />
+    </xct:UniformGrid>
+</ContentPage>
