@@ -67,6 +67,11 @@
             <Button Text="StateLayout" Command="{prism:NavigateTo StateLayoutPage}" />
             <Button Text="UniformGrid" Command="{prism:NavigateTo UniformGridPage}" />
             <Button Text="TabView" Command="{prism:NavigateTo TabViewPage}" />
+
+            <Button Text="AsyncCommand" Command="{prism:NavigateTo AsyncCommandPage}" />
+            <Button Text="AsyncValueCommand" Command="{prism:NavigateTo AsyncValueCommandPage}" />
+            <Button Text="ObservableObject" Command="{prism:NavigateTo ObservableObjectPage}" />
+            <Button Text="ObservableRangeCollection" Command="{prism:NavigateTo ObservableRangeCollectionPage}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
